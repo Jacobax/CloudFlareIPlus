@@ -112,10 +112,10 @@ if [ ! -f "./Piplist" ]; then
 fi
 
 file_path="AS${asn}.txt"
-#url="https://asn2cidr.090227.xyz/AS${asn}"
+url="https://raw.githubusercontent.com/jacobax/CloudFlareIPlus/main/AS${asn}"
 
 upcidr2ip() {
-#        curl -k -L "$url" -o "$file_path"
+        curl -k -L "$url" -o "$file_path"
 
         # 检测临时目录是否存在
         if [ -d "temp" ]; then
